@@ -3,8 +3,6 @@ package com.mesag.app.pageobjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.Random;
-
 public class SignUpServices {
 
     private WebDriver driver;
@@ -14,7 +12,6 @@ public class SignUpServices {
         signUpPageObject = new SignUpPageObject(driver);
     }
 
-    Random rand = new Random();
     long theRandomNum;
     long number1 = 9000000000L;
 
