@@ -1,20 +1,22 @@
-package com.mesag.app;
+package com.mesaj.app;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class HookDriver {
+
 
     public static WebDriver driver;
     @Before
-            public static void createDriver() {
-        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/windows/chromedriver86.exe");
+    public void createDriver() {
+
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
     @After
-    public static void quitDriver(){
+    public  void quitDriver(){
         if(driver != null)
         {driver.quit();
         }

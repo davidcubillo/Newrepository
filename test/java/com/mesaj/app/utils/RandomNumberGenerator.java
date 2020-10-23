@@ -1,4 +1,4 @@
-package com.mesag.app.utils;
+package com.mesaj.app.utils;
 
 import java.util.Random;
 
